@@ -8,11 +8,11 @@ using namespace std;
 GLdouble width, height;
 int wd;
 
-enum {WELCOME, INSTRUCTIONS} screen;
+enum {WELCOME, INSTRUCTIONS, ROLL, END} screen;
 
 void init() {
-    width = 2880;
-    height = 1800;
+    width = 800;
+    height = 800;
 
 }
 
@@ -26,7 +26,12 @@ void initGL() {
  whenever the window needs to be re-painted. */
 void display() {
     // Tell OpenGL to use the whole window for drawing
-    glViewport(0, 0, width*2, height*2); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
+    if(__APPLE__) {
+        glViewport(0, 0, width*2, height*2); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
+    } else {
+        glViewport(0, 0, width, height); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
+    }
+
     
     // Do an orthographic parallel projection with the coordinate
     // system set to first quadrant, limited by screen/window size
