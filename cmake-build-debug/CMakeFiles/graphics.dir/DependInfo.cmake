@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/circle.cpp" "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/circle.cpp.o"
-  "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.cpp" "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/graphics.cpp.o"
-  "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/shape.cpp" "/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/shape.cpp.o"
+  "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/circle.cpp.obj"
+  "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/graphics.cpp.obj"
+  "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/shape.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/System/Library/Frameworks/OpenGL.framework"
+  "C:/Program Files/Common Files/freeglut/include"
   )
 
 # Targets to which this target links.

@@ -6,21 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/circle.h
-shape.h
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/shape.h
+C:/Program Files/Common Files/freeglut/include/GL/freeglut_std.h
+windows.h
+-
+EGL/egl.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdlib.h
+-
 
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.cpp
+C:/Program Files/Common Files/freeglut/include/GL/glut.h
+freeglut_std.h
+C:/Program Files/Common Files/freeglut/include/GL/freeglut_std.h
+
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.h
+shape.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.h
+
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.cpp
 graphics.h
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.h
 iostream
 -
 vector
 -
 circle.h
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/circle.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.h
 
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.h
 stdlib.h
 -
 windows.h
@@ -32,7 +56,7 @@ GLUT/glut.h
 GL/glut.h
 -
 
-/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/shape.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.h
 math.h
 -
 string
