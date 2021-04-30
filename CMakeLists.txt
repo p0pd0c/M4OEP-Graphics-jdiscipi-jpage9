@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.8)
 project(Graphics-Starter)
 
 
-
 if (WIN32)
 
     set(FREEGLUT_INCLUDE_DIRS "C:/Program\ Files/Common\ Files/freeglut/include")
@@ -58,7 +57,7 @@ file(GLOB SOURCE_FILES
 
 
 
-add_executable(graphics ${SOURCE_FILES})
+add_executable(graphics ${SOURCE_FILES} Button.cpp Button.h Quad.cpp Quad.h)
 
 
 
