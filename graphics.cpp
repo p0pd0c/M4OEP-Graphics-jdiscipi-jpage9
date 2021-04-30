@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "circle.h"
+#include "diceRoller.h"
 
 using namespace std;
 
@@ -87,6 +88,8 @@ void cursor(int x, int y) {
 // button will be GLUT_LEFT_BUTTON or GLUT_RIGHT_BUTTON
 // state will be GLUT_UP or GLUT_DOWN
 void mouse(int button, int state, int x, int y) {
+
+
 
     glutPostRedisplay();
 }

@@ -6,7 +6,6 @@
 
 int diceRoller::d4(int mod) {
 
-
     return rand() % 4 + 1 + mod;
 }
 
@@ -26,10 +25,3 @@ int diceRoller::d20(int mod) {
     return rand() % 20 + 1 + mod;
 }
 
-int main(){
-
-    srand(time(0));
-
-
-    return 0;
-}
