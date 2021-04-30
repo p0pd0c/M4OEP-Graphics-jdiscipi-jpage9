@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/circle.h
+shape.h
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/shape.h
+
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.cpp
+graphics.h
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.h
+iostream
+-
+vector
+-
+circle.h
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/circle.h
+
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/graphics.h
+stdlib.h
+-
+windows.h
+-
+sys/time.h
+-
+GLUT/glut.h
+-
+GL/glut.h
+-
+
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/shape.h
+math.h
+-
+string
+-
+

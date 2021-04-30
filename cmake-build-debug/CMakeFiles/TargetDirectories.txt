@@ -1,0 +1,3 @@
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jareddiscipio/Desktop/M4OE-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir
