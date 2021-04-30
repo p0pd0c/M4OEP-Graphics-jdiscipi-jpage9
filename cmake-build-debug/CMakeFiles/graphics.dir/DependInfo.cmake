@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/circle.cpp.obj"
+  "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/diceRoller.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/diceRoller.cpp.obj"
   "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/graphics.cpp.obj"
   "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.cpp" "C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/cmake-build-debug/CMakeFiles/graphics.dir/shape.cpp.obj"
   )
