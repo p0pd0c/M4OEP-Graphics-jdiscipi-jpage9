@@ -11,8 +11,8 @@ int wd;
 enum {WELCOME, INSTRUCTIONS} screen;
 
 void init() {
-    width = 2880;
-    height = 1800;
+    width = 800;
+    height = 800;
 
 }
 
@@ -26,8 +26,11 @@ void initGL() {
  whenever the window needs to be re-painted. */
 void display() {
     // Tell OpenGL to use the whole window for drawing
-    glViewport(0, 0, width*2, height*2); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
-    
+    if(WIN32) {
+        glViewport(0, 0, width, height);
+    } else {
+        glViewport(0, 0, width*2, height*2);
+    }
     // Do an orthographic parallel projection with the coordinate
     // system set to first quadrant, limited by screen/window size
     glMatrixMode(GL_PROJECTION); // DO NOT CHANGE THIS LINE
