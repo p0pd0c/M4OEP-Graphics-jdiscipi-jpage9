@@ -141,6 +141,19 @@ graphics/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/build
 .PHONY : graphics/fast
 
+#=============================================================================
+# Target rules for targets named testing
+
+# Build rule for target.
+testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 testing
+.PHONY : testing
+
+# fast build rule for target.
+testing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/build
+.PHONY : testing/fast
+
 circle.obj: circle.cpp.obj
 
 .PHONY : circle.obj
@@ -167,6 +180,36 @@ circle.s: circle.cpp.s
 circle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/circle.cpp.s
 .PHONY : circle.cpp.s
+
+diceRoller.obj: diceRoller.cpp.obj
+
+.PHONY : diceRoller.obj
+
+# target to build an object file
+diceRoller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/diceRoller.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/diceRoller.cpp.obj
+.PHONY : diceRoller.cpp.obj
+
+diceRoller.i: diceRoller.cpp.i
+
+.PHONY : diceRoller.i
+
+# target to preprocess a source file
+diceRoller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/diceRoller.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/diceRoller.cpp.i
+.PHONY : diceRoller.cpp.i
+
+diceRoller.s: diceRoller.cpp.s
+
+.PHONY : diceRoller.s
+
+# target to generate assembly for a file
+diceRoller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/diceRoller.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/diceRoller.cpp.s
+.PHONY : diceRoller.cpp.s
 
 graphics.obj: graphics.cpp.obj
 
@@ -231,9 +274,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... graphics
+	@echo ... testing
 	@echo ... circle.obj
 	@echo ... circle.i
 	@echo ... circle.s
+	@echo ... diceRoller.obj
+	@echo ... diceRoller.i
+	@echo ... diceRoller.s
 	@echo ... graphics.obj
 	@echo ... graphics.i
 	@echo ... graphics.s

@@ -89,10 +89,24 @@ CMakeFiles/graphics.dir/circle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics.dir/circle.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\circle.cpp -o CMakeFiles\graphics.dir\circle.cpp.s
 
+CMakeFiles/graphics.dir/diceRoller.cpp.obj: CMakeFiles/graphics.dir/flags.make
+CMakeFiles/graphics.dir/diceRoller.cpp.obj: CMakeFiles/graphics.dir/includes_CXX.rsp
+CMakeFiles/graphics.dir/diceRoller.cpp.obj: ../diceRoller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics.dir/diceRoller.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\graphics.dir\diceRoller.cpp.obj -c C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\diceRoller.cpp
+
+CMakeFiles/graphics.dir/diceRoller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/graphics.dir/diceRoller.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\diceRoller.cpp > CMakeFiles\graphics.dir\diceRoller.cpp.i
+
+CMakeFiles/graphics.dir/diceRoller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/graphics.dir/diceRoller.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\diceRoller.cpp -o CMakeFiles\graphics.dir\diceRoller.cpp.s
+
 CMakeFiles/graphics.dir/graphics.cpp.obj: CMakeFiles/graphics.dir/flags.make
 CMakeFiles/graphics.dir/graphics.cpp.obj: CMakeFiles/graphics.dir/includes_CXX.rsp
 CMakeFiles/graphics.dir/graphics.cpp.obj: ../graphics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/graphics.dir/graphics.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics.dir/graphics.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\graphics.dir\graphics.cpp.obj -c C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\graphics.cpp
 
 CMakeFiles/graphics.dir/graphics.cpp.i: cmake_force
@@ -106,7 +120,7 @@ CMakeFiles/graphics.dir/graphics.cpp.s: cmake_force
 CMakeFiles/graphics.dir/shape.cpp.obj: CMakeFiles/graphics.dir/flags.make
 CMakeFiles/graphics.dir/shape.cpp.obj: CMakeFiles/graphics.dir/includes_CXX.rsp
 CMakeFiles/graphics.dir/shape.cpp.obj: ../shape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/graphics.dir/shape.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/graphics.dir/shape.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\graphics.dir\shape.cpp.obj -c C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\shape.cpp
 
 CMakeFiles/graphics.dir/shape.cpp.i: cmake_force
@@ -120,6 +134,7 @@ CMakeFiles/graphics.dir/shape.cpp.s: cmake_force
 # Object files for target graphics
 graphics_OBJECTS = \
 "CMakeFiles/graphics.dir/circle.cpp.obj" \
+"CMakeFiles/graphics.dir/diceRoller.cpp.obj" \
 "CMakeFiles/graphics.dir/graphics.cpp.obj" \
 "CMakeFiles/graphics.dir/shape.cpp.obj"
 
@@ -127,13 +142,14 @@ graphics_OBJECTS = \
 graphics_EXTERNAL_OBJECTS =
 
 graphics.exe: CMakeFiles/graphics.dir/circle.cpp.obj
+graphics.exe: CMakeFiles/graphics.dir/diceRoller.cpp.obj
 graphics.exe: CMakeFiles/graphics.dir/graphics.cpp.obj
 graphics.exe: CMakeFiles/graphics.dir/shape.cpp.obj
 graphics.exe: CMakeFiles/graphics.dir/build.make
 graphics.exe: CMakeFiles/graphics.dir/linklibs.rsp
 graphics.exe: CMakeFiles/graphics.dir/objects1.rsp
 graphics.exe: CMakeFiles/graphics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable graphics.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable graphics.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\graphics.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

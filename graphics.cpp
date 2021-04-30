@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "circle.h"
+#include "diceRoller.h"
 #include "Button.h"
 
 using namespace std;
@@ -55,11 +56,7 @@ void initGL() {
  whenever the window needs to be re-painted. */
 void display() {
     // Tell OpenGL to use the whole window for drawing
-    if(__APPLE__) {
-        glViewport(0, 0, width*2, height*2); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
-    } else {
-        glViewport(0, 0, width, height); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
-    }
+    glViewport(0, 0, width, height); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
 
     
     // Do an orthographic parallel projection with the coordinate
@@ -91,7 +88,7 @@ void display() {
             drawEnd();
             break;
     }
-    
+
     glFlush();  // Render now
 }
 
@@ -112,7 +109,7 @@ void kbd(unsigned char key, int x, int y)
             screen = ROLL;
         }
     }
-    
+
     glutPostRedisplay();
 }
 

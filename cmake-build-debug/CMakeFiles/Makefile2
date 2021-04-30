@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\c
 
 # The main recursive "all" target.
 all: CMakeFiles/graphics.dir/all
+all: CMakeFiles/testing.dir/all
 
 .PHONY : all
 
@@ -82,6 +83,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/graphics.dir/clean
+clean: CMakeFiles/testing.dir/clean
 
 .PHONY : clean
 
@@ -92,12 +94,12 @@ clean: CMakeFiles/graphics.dir/clean
 CMakeFiles/graphics.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target graphics"
 .PHONY : CMakeFiles/graphics.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/graphics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/graphics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/graphics.dir/rule
@@ -111,6 +113,33 @@ graphics: CMakeFiles/graphics.dir/rule
 CMakeFiles/graphics.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\graphics.dir\build.make CMakeFiles/graphics.dir/clean
 .PHONY : CMakeFiles/graphics.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testing.dir
+
+# All Build rule for target.
+CMakeFiles/testing.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles --progress-num=6,7 "Built target testing"
+.PHONY : CMakeFiles/testing.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/testing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jacks\CLionProjects\M4OEP-Graphics-jdiscipi-jpage9\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/testing.dir/rule
+
+# Convenience name for target.
+testing: CMakeFiles/testing.dir/rule
+
+.PHONY : testing
+
+# clean rule for target.
+CMakeFiles/testing.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testing.dir\build.make CMakeFiles/testing.dir/clean
+.PHONY : CMakeFiles/testing.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

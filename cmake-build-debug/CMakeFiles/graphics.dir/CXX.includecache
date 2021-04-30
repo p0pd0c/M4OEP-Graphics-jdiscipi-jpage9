@@ -6,59 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Program Files/Common Files/freeglut/include/GL/freeglut_std.h
-windows.h
--
-EGL/egl.h
--
-GLES/gl.h
--
-GLES2/gl2.h
--
-OpenGL/gl.h
--
-OpenGL/glu.h
--
-GL/gl.h
--
-GL/glu.h
--
-stdlib.h
--
-
-C:/Program Files/Common Files/freeglut/include/GL/glut.h
-freeglut_std.h
-C:/Program Files/Common Files/freeglut/include/GL/freeglut_std.h
-
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.h
-shape.h
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.h
-
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.cpp
-graphics.h
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/diceRoller.cpp
+diceRoller.h
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/diceRoller.h
 iostream
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/iostream
+random
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/random
+ctime
 -
-vector
--
-circle.h
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/circle.h
-
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/graphics.h
-stdlib.h
--
-windows.h
--
-sys/time.h
--
-GLUT/glut.h
--
-GL/glut.h
+cstdlib
 -
 
-C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/shape.h
-math.h
--
-string
--
+C:/Users/jacks/CLionProjects/M4OEP-Graphics-jdiscipi-jpage9/diceRoller.h
 

@@ -8,9 +8,13 @@ CMakeFiles/graphics.dir/circle.cpp.obj: ../circle.h
 CMakeFiles/graphics.dir/circle.cpp.obj: ../graphics.h
 CMakeFiles/graphics.dir/circle.cpp.obj: ../shape.h
 
+CMakeFiles/graphics.dir/diceRoller.cpp.obj: ../diceRoller.cpp
+CMakeFiles/graphics.dir/diceRoller.cpp.obj: ../diceRoller.h
+
 CMakeFiles/graphics.dir/graphics.cpp.obj: C:/Program\ Files/Common\ Files/freeglut/include/GL/freeglut_std.h
 CMakeFiles/graphics.dir/graphics.cpp.obj: C:/Program\ Files/Common\ Files/freeglut/include/GL/glut.h
 CMakeFiles/graphics.dir/graphics.cpp.obj: ../circle.h
+CMakeFiles/graphics.dir/graphics.cpp.obj: ../diceRoller.h
 CMakeFiles/graphics.dir/graphics.cpp.obj: ../graphics.cpp
 CMakeFiles/graphics.dir/graphics.cpp.obj: ../graphics.h
 CMakeFiles/graphics.dir/graphics.cpp.obj: ../shape.h
