@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int roll;
+
 
 // Function declarations for drawing each scene type
 void drawWelcome();
@@ -24,7 +24,7 @@ vector<Quad> menuOutlines;
 // State
 int sides;
 int modifier;
-int total;
+int roll;
 
 GLdouble width, height;
 int wd;
@@ -208,6 +208,7 @@ void mouse(int button, int state, int x, int y) {
                         default:
                             break;
                     }
+                    cout << "User set sides to " + to_string(sides) << endl;
                 }
             }
 
@@ -233,6 +234,7 @@ void mouse(int button, int state, int x, int y) {
                         default:
                             break;
                     }
+                    cout << "User set modifier to " + to_string(modifier) << endl;
                 }
             }
 
@@ -258,17 +260,33 @@ void mouse(int button, int state, int x, int y) {
             for(int i = 0; i < interactables.size(); i++) {
                 interactables[i].release();
 
-                if(i == 1 && interactables[i].isOverlapping(x, y)) {
+                if(i == 1 && interactables[i].isOverlapping(x, y) && screen == ROLL) {
                     // User pressed the roll result button
                     screen = END;
-                } else if(i == 0) {
+                } else if(i == 0 && interactables[i].isOverlapping(x, y) && screen == ROLL) {
                     // User releases roll button
+                    cout << "User released the roll button with " + to_string(sides) + " sides and a " + to_string(modifier) + " modifier!" << endl;
                     // Need to use the sides and modifier to call the correct method and then set total
+                    switch(sides) {
+                        case 20:
+                            roll = DiceRoller::d20(modifier);
+                            break;
+                        case 12:
+                            roll = DiceRoller::d12(modifier);
+                            break;
+                        case 8:
+                            roll = DiceRoller::d8(modifier);
+                            break;
+                        case 6:
+                            roll = DiceRoller::d6(modifier);
+                            break;
+                        case 4:
+                            roll = DiceRoller::d4(modifier);
+                            break;
+                        default:
+                            break;
 
-
-                    // Change the button's text to have the total in there
-
-
+                    }
                 }
             }
         }
@@ -353,7 +371,8 @@ void drawEnd() {
 
 /* Main function: GLUT runs as a console application starting at main()  */
 int main(int argc, char** argv) {
-    
+    srand(time(0));
+
     init();
     
     glutInit(&argc, argv);          // Initialize GLUT
@@ -363,7 +382,7 @@ int main(int argc, char** argv) {
     glutInitWindowSize((int)width, (int)height);
     glutInitWindowPosition(100, 200); // Position the window's initial top-left corner
     /* create the window and store the handle to it */
-    wd = glutCreateWindow("Fun with Drawing!" /* title */ );
+    wd = glutCreateWindow("DND Dice Roller!" /* title */ );
     
     // Register callback handler for window re-paint event
     glutDisplayFunc(display);

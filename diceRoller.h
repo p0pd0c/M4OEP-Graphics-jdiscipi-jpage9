@@ -2,7 +2,7 @@
 #define GRAPHICS_STARTER_DICEROLLER_H
 
 
-class diceRoller {
+class DiceRoller {
 private:
 
     int value;
