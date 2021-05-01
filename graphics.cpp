@@ -19,30 +19,44 @@ void drawEnd();
 vector<Button> leftMenu;
 vector<Button> rightMenu;
 vector<Button> interactables;
-Quad leftMenuOutLine;
-Quad rightMenuOutLine;
+vector<Quad> menuOutlines;
+
+// State
+int sides;
+int modifier;
+int total;
 
 GLdouble width, height;
 int wd;
 
 enum {WELCOME, INSTRUCTIONS, ROLL, END} screen;
 
+
 void init() {
     width = 800;
     height = 800;
     roll = 0;
+    sides = 20;
+    modifier = 0;
     screen = WELCOME;
 
     // initialize roll and end buttons
-    interactables.push_back(Button({1,0,0}, {static_cast<int>(width/2), static_cast<int>(height/2)}, 150, 150, "Roll"));
-    interactables.push_back(Button({0,1,0},{static_cast<int>(width/2), static_cast<int>(height/2 + 200)},150,150, "Total = NaN"));
+    interactables.push_back(Button({150/255.0,10/255.0,1}, {405, 180}, 350, 350, "Roll"));
+    interactables.push_back(Button({0,1,0},{405, 800-175-25},350,350, "Reveal Roll"));
     // initialize leftMenu
-    leftMenu.push_back(Button({0,0,1},{static_cast<int>(width/2) - 200, static_cast<int>(height/2)},100, 100, "20"));
-    leftMenu.push_back(Button({0,0,1},{static_cast<int>(width/2) - 200, static_cast<int>(height/2) + 200},100, 100, "20"));
-    leftMenu.push_back(Button({0,0,1},{static_cast<int>(width/2) - 200, static_cast<int>(height/2) + 400},100, 100, "20"));
-    leftMenu.push_back(Button({0,0,1},{static_cast<int>(width/2) - 200, static_cast<int>(height/2) + 600},100, 100, "20"));
-    leftMenu.push_back(Button({0,0,1},{static_cast<int>(width/2) - 200, static_cast<int>(height/2) + 800},100, 100, "20"));
-    leftMenuOutLine = Quad({1,1,1},{100, 400},200, 800);
+    leftMenu.push_back(Button({0,0,1},{90, 95},130, 130, "20"));
+    leftMenu.push_back(Button({0,0,1},{90, 95 + 150},130, 130, "12"));
+    leftMenu.push_back(Button({0,0,1},{90, 95 + 2*150},130, 130, "8"));
+    leftMenu.push_back(Button({0,0,1},{90, 95 + 3*150},130, 130, "6"));
+    leftMenu.push_back(Button({0,0,1},{90, 95 + 4*150},130, 130, "4"));
+    menuOutlines.push_back(Quad({0,0,0},{85 + 5, 385 + 5},170, 770));
+    // initialize right menu
+    rightMenu.push_back(Button({0,0,1},{800 - 90, 95},130, 130, "-2"));
+    rightMenu.push_back(Button({0,0,1},{800 - 90, 95 + 150},130, 130, "-1"));
+    rightMenu.push_back(Button({0,0,1},{800 - 90, 95 + 2*150},130, 130, "0"));
+    rightMenu.push_back(Button({0,0,1},{800 - 90, 95 + 3*150},130, 130, "+1"));
+    rightMenu.push_back(Button({0,0,1},{800 - 90, 95 + 4*150},130, 130, "+2"));
+    menuOutlines.push_back(Quad({0,0,0},{800 - 85 - 5, 385 + 5},170, 770));
 
 }
 
@@ -56,7 +70,7 @@ void initGL() {
  whenever the window needs to be re-painted. */
 void display() {
     // Tell OpenGL to use the whole window for drawing
-    glViewport(0, 0, width, height); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
+    glViewport(0, 0, width*2, height*2); // DO NOT CHANGE THIS LINE (unless you're on a Mac running Catalina)
 
     
     // Do an orthographic parallel projection with the coordinate
@@ -110,6 +124,12 @@ void kbd(unsigned char key, int x, int y)
         }
     }
 
+    if(key == 32) {
+        if(screen == END) {
+            screen = ROLL;
+        }
+    }
+
     glutPostRedisplay();
 }
 
@@ -141,6 +161,13 @@ void cursor(int x, int y) {
             b.release();
         }
     }
+    for(Button& b : rightMenu) {
+        if(b.isOverlapping(x,y)) {
+            b.hover();
+        } else {
+            b.release();
+        }
+    }
 
     for(Button& b : interactables) {
         if(b.isOverlapping(x,y)) {
@@ -158,9 +185,54 @@ void cursor(int x, int y) {
 void mouse(int button, int state, int x, int y) {
     if(button == GLUT_LEFT_BUTTON) {
         if(state == GLUT_DOWN) {
-            for(Button& b : leftMenu) {
-                if(b.isOverlapping(x,y)) {
-                    b.pressDown();
+            // 4 8 6 12 20
+            for(int i = 0; i < leftMenu.size(); i++) {
+                if(leftMenu[i].isOverlapping(x,y)) {
+                    leftMenu[i].pressDown();
+                    switch(i) {
+                        case 0:
+                            sides = 20;
+                            break;
+                        case 1:
+                            sides = 12;
+                            break;
+                        case 2:
+                            sides = 8;
+                            break;
+                        case 3:
+                            sides = 6;
+                            break;
+                        case 4:
+                            sides = 4;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            for(int i = 0; i < rightMenu.size(); i++) {
+                if(rightMenu[i].isOverlapping(x,y)) {
+                    rightMenu[i].pressDown();
+                    switch(i) {
+                        case 0:
+                            modifier = -2;
+                            break;
+                        case 1:
+                            modifier = -1;
+                            break;
+                        case 2:
+                            modifier = 0;
+                            break;
+                        case 3:
+                            modifier = 1;
+                            break;
+                        case 4:
+                            modifier = 2;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
 
@@ -169,16 +241,34 @@ void mouse(int button, int state, int x, int y) {
                     b.pressDown();
                 }
             }
+
         } else {
             for(Button& b : leftMenu) {
                 if(b.isOverlapping(x,y)) {
                     b.release();
                 }
             }
-
-            for(Button& b : interactables) {
+            for(Button& b : rightMenu) {
                 if(b.isOverlapping(x,y)) {
                     b.release();
+                }
+            }
+
+            // Handle flow to the end screen from roll screen
+            for(int i = 0; i < interactables.size(); i++) {
+                interactables[i].release();
+
+                if(i == 1 && interactables[i].isOverlapping(x, y)) {
+                    // User pressed the roll result button
+                    screen = END;
+                } else if(i == 0) {
+                    // User releases roll button
+                    // Need to use the sides and modifier to call the correct method and then set total
+
+
+                    // Change the button's text to have the total in there
+
+
                 }
             }
         }
@@ -199,7 +289,7 @@ void drawWelcome() {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
     title = "Press i at any time to see the instructions!";
-    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 7 + 7); // the definition of center
+    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 3*7); // the definition of center
     for (const char &letter : title) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
@@ -213,28 +303,33 @@ void drawInstructions() {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
     title = "Use the right menu to select modifier!";
-    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 7 + 7);
+    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 3*7);
     for (const char &letter : title) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
     title = "Press r to go to the dice roller!";
-    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 7 + 7 + 7);
+    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 5*7);
     for (const char &letter : title) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
 }
 
 void drawRoll() {
-    leftMenuOutLine.draw();
+    // Draw menu outlines
+    for(Quad& q: menuOutlines) {
+        q.draw();
+    }
+
+    // Fill menus with content
     for(Button& b: leftMenu) {
         b.draw();
     }
 
-    rightMenuOutLine.draw();
     for(Button& b : rightMenu) {
         b.draw();
     }
 
+    // Add center content
     for(Button& b : interactables) {
         b.draw();
     }
@@ -245,6 +340,12 @@ void drawEnd() {
     string title = "You rolled a " + to_string(roll);
     glColor3f(0, 0, 0);
     glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 7); // the definition of center
+    for (const char &letter : title) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
+    }
+    title = "Press space to go back to the roller!";
+    glColor3f(0, 0, 0);
+    glRasterPos2i(width/2.0 - (5.210347565892984769 * title.length()), height/2.0 + 3*7); // the definition of center
     for (const char &letter : title) {
         glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, letter);
     }
