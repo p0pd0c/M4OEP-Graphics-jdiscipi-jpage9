@@ -59,7 +59,6 @@ file(GLOB SOURCE_FILES
 
 
 add_executable(graphics ${SOURCE_FILES})
-add_executable(testing diceRoller.cpp)
 
 
 

@@ -5,7 +5,6 @@
 #include <cstdlib>
 
 int DiceRoller::d4(int mod) {
-
     return rand() % 4 + 1 + mod;
 }
 

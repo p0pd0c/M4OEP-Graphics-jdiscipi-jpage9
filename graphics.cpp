@@ -4,6 +4,8 @@
 #include "circle.h"
 #include "diceRoller.h"
 #include "Button.h"
+#include "cstdlib"
+#include "ctime"
 
 using namespace std;
 
